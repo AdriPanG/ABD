@@ -1,0 +1,16 @@
+<!ELEMENT abedemons (especie+, ataque+)>
+<!ELEMENT especie (nombre, url, descripcion, tipo+, ataques?, evoluciones?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT url (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT ataques (tiene-ataque+)>
+<!ELEMENT tiene-ataque EMPTY>
+<!ELEMENT evoluciones (especie)+>
+<!ELEMENT ataque (nombre, daño+)>
+<!ELEMENT daño EMPTY>
+<!ATTLIST especie id ID #REQUIRED>
+<!ATTLIST tiene-ataque id IDREF #REQUIRED>
+<!ATTLIST ataque id ID #REQUIRED>
+<!ATTLIST daño tipo CDATA #REQUIRED
+			valor CDATA #REQUIRED>
